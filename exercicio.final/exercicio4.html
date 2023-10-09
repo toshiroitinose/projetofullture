@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <!--Escreva um algoritmo que permita que o professor digite as notas da 1a. e 2a. avaliações de vários alunos, um aluno de cada vez. 
+        calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. 
+        Após apresentar a media calculada, o algoritmo deverá perguntar se o professor deseja continuar calculando a media para outros alunos. 
+        Se a resposta for ‘SIM’, o algoritmo continua, caso contrário, o algoritmo finaliza.-->
+</head>
+<body>
+    <script>
+        let opcao = "";
+        let nota1, nota2, media;
+
+        while (opcao !== "sim") {
+            opcao = prompt("Calculadora de média simples \n\nDigite o nome do Aluno ou \nDigite 'sim' para sair ");
+            if (opcao == "sim") {
+                break;
+            }
+            nota1 = parseInt(prompt("Digite a 1a. Nota do aluno: "));
+            nota2 = parseInt(prompt("Digite a 2a. Nota do aluno: "));
+            media = (nota1 + nota2) / 2;
+
+            alert("A média do aluno: " + opcao + " é " + media);
+        }
+
+    </script>
+    
+</body>
+</html>

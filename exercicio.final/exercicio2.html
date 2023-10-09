@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas.
+ Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que ele recebe por carro vendido.
+  Calcule e escreva o salário final do vendedor -->
+<body>
+    <script>
+          let carrosVendidos = Number(prompt("Calculadora para sálario de vendedor de veículos! \nquantos carros foram vendidos pelo vendedor: "));
+        let valorTotalVendas = Number(prompt("Qual foi o valor (em Reais) do total da venda realizado pelo vendedor? "));
+        let salarioFixo = Number(prompt("Qual o salário fixo do vendedor?"));
+        let valorPorCarro = Number(prompt("Qual o valor o vendedor recebe por cada veículo vendido?"));
+        
+        let vendasPorcentagem = 0.05 * valorTotalVendas;
+        let comissaoFixa = valorPorCarro * carrosVendidos;
+        let salarioFinal = vendasPorcentagem + comissaoFixa + salarioFixo;
+
+        alert("O salário final do vendedor é: " + " R$ " + salarioFinal + "\n\nQuantidade de carros vendidos: " + carrosVendidos + "\nValor Total das vendas: " + valorTotalVendas + " \nSalário fixo mensal: " + salarioFixo + " \nComissão por carro vendido: " + valorPorCarro + "\nComissão de 5% sobre o total de vendas: " + vendasPorcentagem);
+    </script>
+    
+</body>
+</html>

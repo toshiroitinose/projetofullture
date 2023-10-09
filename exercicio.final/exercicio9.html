@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+    <!--
+        Escrever um algoritmo que lê uma quantidade não informada de dados de pessoas que estão sendo monitoradas no posto de saúde. 
+        Para cada pessoa é anotada o sexo (M ou F) e a altura (em metros), que é fornecida via teclado, sendo que a altura igual a zero
+        informa o final da leitura. Armazenar as informações em vetores e posteriormente, calcule e escreva: 
+        A maior altura informada, 
+        A média das alturas das mulheres,
+        A quantidade de homens,
+        A menor altura dos homens
+    -->
+</head>
+<body>
+    <script>
+    let alturas = [];
+    let sexos = [];
+    while (true) {
+    let sexo = prompt("Informe o sexo (M/F) da pessoa (ou '0' para encerrar):").toUpperCase();
+    
+    if (sexo === '0') {
+        break;
+    }
+    let altura = parseFloat(prompt("Altura em metros:"));
+    
+    sexos.push(sexo);
+    alturas.push(altura);
+    
+}        if (alturas.length === 0) {
+    alert("Nenhum dado foi inserido.");
+}      else {
+    let maiorAltura = Math.max(...alturas);
+    alert("A maior altura informada é: " + maiorAltura + " metros");
+    let alturasMulheres = alturas.filter((altura, index) => sexos[index] === 'F');
+    if (alturasMulheres.length > 0) {
+        let mediaAlturasMulheres = alturasMulheres.reduce((acc, altura) => acc + altura, 0) / alturasMulheres.length;
+        alert("A média das alturas das mulheres é: " + mediaAlturasMulheres.toFixed(2) + " metros");
+    } else {
+        alert("Nenhuma mulher foi registrada.");
+    }
+    let quantidadeHomens = sexos.filter(sexo => sexo === 'M').length;
+    alert("A quantidade de homens é: " + quantidadeHomens);
+    let alturasHomens = alturas.filter((altura, index) => sexos[index] === 'M');
+    if (alturasHomens.length > 0) {
+        let menorAlturaHomens = Math.min(...alturasHomens);
+        alert("A menor altura dos homens é: " + menorAlturaHomens + " metros");
+    } else {
+        alert("Nenhum homem foi registrado.");
+    }
+}
+
+    </script>
+</body>
+</html>

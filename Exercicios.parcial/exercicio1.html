@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+  <!--1. Escreva um algoritmo que solicite que o usuário digite um número. Se o número
+    digitado pelo usuário for positivo armazene-o em uma variável A, se for negativo,
+    armazene-o em uma variável B. No final mostrar o resultado.
+  -->
+</head>
+<body> 
+    <script>
+        let numero = +(prompt("Olá, digite um número!"));
+        let numPositivo = 0;
+        let numNegativo = 0;
+        if(numero > 0){
+            numPositivo = numero;
+            alert("O número: " + numPositivo + " é positivo!");
+        } else if(numero < 0){
+            numNegativo = numero;
+            alert("O número: " + numNegativo + " é negativo!");
+        } else{
+            alert("o número: " + numero + " é nulo!");
+        }
+    </script>
+
+
+    
+</body>
+</html>

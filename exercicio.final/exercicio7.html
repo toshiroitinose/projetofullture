@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+    <!--
+        Escrever um algoritmo que lê cinco números inteiros, um de cada vez,
+         armazena os números lidos em um vetor e a partir da leitura do vetor 
+         imprime qual é o maior e o menor dos números lidos e também a soma dos números lidos.
+    -->
+</head>
+<body>
+ <script>
+    let numeros = [];
+        numeros[0] = parseInt(prompt("Digite o primeiro número inteiro"));
+        numeros[1] = parseInt(prompt("Digite o segundo número inteiro"));
+        numeros[2] = parseInt(prompt("Digite o terceiro número inteiro"));
+        numeros[3] = parseInt(prompt("Digite o quarto número inteiro"));
+        numeros[4] = parseInt(prompt("Digite o quinto número inteiro"));
+
+        let numMaior = numeros[0];
+        let numMenor = numeros[1];
+
+        for(let i = 0; i <numeros.length; i++){
+            
+            if(numeros[i] > numMaior){
+                numMaior = numeros[i];
+            } else if(numeros[i] < numMenor){
+                numMenor = numeros[i]
+            }
+        }
+        alert("O maior número é: " + numMaior + " \nE o menor número é: " + numMenor);
+ </script>   
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <!--
+    6. Escreva um algoritmo que solicite ao usuário que digite dois valores inteiros e imprime
+o resultado para as quatro operações básicas (soma, subtração, divisão e
+multiplicação).
+    -->
+</head>
+<body>
+    <script>
+        let numero1 = +prompt("Soma, subtração, divisão e multiplicação) \n\nDigite o primeiro número: ");
+        let numero2 = +prompt("Digite o segundo número: ");
+        let soma = (numero1 + numero2);
+        let subtracao = (numero1 - numero2);
+        let divisao = (numero1 / numero2);
+        let multiplicacao = (numero1 * numero2);
+
+        alert(
+            "O número: " + numero1 + " + " + numero2 + " = " + soma + "\n" +
+            "O número: " + numero1 + " - " + numero2 + " = " + subtracao + "\n" +
+            "O número: " + numero1 + " : " + numero2 + " = " + divisao + "\n" +
+            "O número: " + numero1 + " x " + numero2 + " = " + multiplicacao + "\n"
+        )
+    </script>
+    
+</body>
+</html>

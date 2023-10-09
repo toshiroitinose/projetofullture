@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <!--
+     8. A empresa de fornecimento de energia elétrica da sua cidade disponibilizou a tabela
+de consumo de energia elétrica em Kwh. Escreva um algoritmo para calcular a conta
+de energia elétrica de um estabelecimento, considerando a seguinte tabela de valores
+disponibilizada
+    -->
+</head>
+<body>
+    <script>
+               let consumo = +prompt("Digite o quanto seu estabelecimento consumiu em Kwh:");
+        let calculo;
+
+        if(consumo < 301 && consumo>0){
+            calculo = (consumo*1.25);
+            alert("O valor da sua conta será de: " + calculo + " Reais.");
+        }else if(consumo>300 && consumo<=600){
+            calculo = (consumo*1.5);
+            alert("O valor da sua conta será de: " + calculo + " Reais.");
+        }else if(consumo>601 && consumo<=1000){
+            calculo = (consumo*1.75);
+            alert("O valor da sua conta será de: " + calculo + " Reais.");
+        }else if(consumo>1000){
+            calculo = (consumo*2);
+            alert("O valor da sua conta será de: " + calculo + " Reais.");
+        }else {
+            alert("Valor digitado é nulo!")
+        }
+    </script>
+    
+</body>
+</html>

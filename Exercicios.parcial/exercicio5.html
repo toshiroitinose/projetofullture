@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <!--
+        5. Escrever um algoritmo que solicite ao usuário que digite três números inteiros e
+imprime qual é o menor deles e também a média destes números.
+    -->
+</head>
+<body>
+    <script>
+          let numero1 = parseInt(prompt("Digite um numero inteiro! \n\n Digite o primeiro número: "));
+        let numero2 = parseInt(prompt("Digite o segundo número: "));
+        let numero3 = parseInt(prompt("Digite o terceiro número: "));
+        let media = (numero1 + numero2 + numero3)/3;
+
+        if(numero1 < numero2 && numero1 < numero3){
+            alert("O número: " + numero1 + " é o menor" + "\n\nA média dos números é: " + media);
+        } else if(numero2 < numero1 && numero2 < numero3){
+            alert("O número: " + numero2 + " é o menor" + "\n\nA média dos números é: " + media);
+        }else if(numero3 < numero1 && numero3 < numero2){
+            alert("O número: " + numero3 + " é o menor" + "\n\nA média dos números é: " + media);
+        }
+
+    </script>
+    
+</body>
+</html>

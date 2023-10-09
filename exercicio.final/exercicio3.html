@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <!--Escreva um algoritmo que solicite ao usuário que informe: quantidade atual em estoque, 
+        quantidade máxima em estoque e quantidade mínima em estoque de um produto. 
+        Calcular e escrever a quantidade média ((quantidade média = quantidade máxima + quantidade mínima)/2). 
+        Se a quantidade em estoque for maior ou igual a quantidade média exibir a mensagem 'Não efetuar compra', 
+        senão escrever a mensagem 'Efetuar compra'-->
+</head>
+
+<body>
+    <script>
+
+        let estoqueAtual = +prompt("Controle de estoque! \nDigite a quantidade atual em estoque do produto: ");
+        let maximoEstoque = +prompt("Quantidade máxima do produto em estoque? ");
+        let minimoEstoque = +prompt("Quantidade mínima do produto em estoque? ");
+        let mediaProduto = ((maximoEstoque + minimoEstoque) / 2);
+
+        if (estoqueAtual >= mediaProduto) {
+            alert("A quantidade atual é maior ou igual a margem de segurança em estoque! \n\nNÃO EFETUAR COMPRA!");
+        } else {
+            alert("A quantidade está abaixo da margem de segurança em estoque! \n\nEFETUAR COMPRA!");
+        }
+
+    </script>
+</body>
+
+</html>

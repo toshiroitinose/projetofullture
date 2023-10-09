@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+    <!--
+        Escrever um algoritmo que lê uma quantidade informada inicialmente de notas de alunos da disciplina de Lógica. 
+        Para cada aluno são lidas quatro (4) notas variando de zero (0) a dez (10). 
+        Para ser aprovado o aluno necessita de média igual ou superior a seis (6).
+        Ler as notas, calcular a média e armazenar em uma matriz (Vetor bidimensional). 
+        Considere o índice da linha da matriz como o número do aluno na chamada. Após o cálculo da média, ler os dados e escrever: 
+        “O Aluno y foi Aprovado (ou Reprovado) com média x,xx”.
+         No final informar: 
+         quantos alunos foram aprovados, 
+         quantos alunos foram reprovados, 
+         qual a porcentagem de alunos aprovados.
+    -->
+</head>
+<body>
+    <script>
+     const quantidadeAlunos = parseInt(prompt("Digite a quantidade de alunos:"));
+     const medias = [];
+        let aprovados = 0;
+        let reprovados = 0;
+for (let i = 0; i < quantidadeAlunos; i++) {
+    const notas = [];
+    let somaNotas = 0;
+for (let j = 0; j < 4; j++) {
+    const nota = parseFloat(prompt(`Digite a nota ${j + 1} do aluno ${i + 1} (entre 0 e 10):`));
+
+if (nota < 0 || nota > 10) {
+    alert("Nota inválida. Por favor, digite uma nota entre 0 e 10.");
+     j--; 
+} else {
+    notas.push(nota);
+    somaNotas += nota;
+        }
+ }
+    const media = somaNotas / 4;
+    medias.push(media);
+if (media >= 6) {
+        aprovados++;
+        alert(`O Aluno ${i + 1} foi Aprovado com média ${media.toFixed(2)}`);
+ } else {
+        reprovados++;
+        alert(`O Aluno ${i + 1} foi Reprovado com média ${media.toFixed(2)}`);
+    }
+}
+const porcentagemAprovados = (aprovados / quantidadeAlunos) * 100;
+alert("Quantidade de alunos aprovados: " + aprovados);
+alert("Quantidade de alunos reprovados: " + reprovados);
+alert("Porcentagem de alunos aprovados: " + porcentagemAprovados.toFixed(2));
+</script>
+    
+</body>
+</html>

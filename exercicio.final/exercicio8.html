@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+    <!--
+    Escreva um algoritmo que permita a leitura dos nomes de 10 pessoas e armazene-os nomes lidos em um vetor. 
+    Após isto, o algoritmo deve permitir a leitura de mais 1 nome qualquer de pessoa e depois escrever a mensagem ACHEI, 
+    se o nome estiver entre os 10 nomes lidos anteriormente (guardados no vetor), ou NÃO ACHEI caso contrário.
+    -->
+</head>
+<body>
+    <script>
+        let nomePessoas = [];
+        let nomeIgual = [];
+        let contagem = 0;
+        let contagem1 = 0;
+
+
+        for (let i = 0; i <= 9; i++) {
+            nomePessoas[i] = prompt("Digite o nome da pessoa " + (i + 1));
+            contagem++
+        if (contagem === 10) {
+                nomeIgual = prompt("Digite mais 1 nome para verificação de nomes iguais. ");
+        for (let i = 0; i <= nomePessoas.length; i++) {
+                contagem1++
+        if (nomePessoas[i] == nomeIgual) {
+                 nomeIgual = nomePessoas[i];
+                alert("ACHEI");
+
+     } else if (nomeIgual != nomePessoas[i] && contagem1 == 10) {
+                alert("NÃO ACHEI")
+
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
